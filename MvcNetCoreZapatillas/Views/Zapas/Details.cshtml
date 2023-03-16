@@ -1,0 +1,24 @@
+﻿@model Zapatilla
+
+<div style="width:auto;border:solid black 2px; box-shadow:6px 6px;">
+    <h1>Nombre: @Model.Nombre</h1>
+    <p>Descripcion: @Model.Descripcion</p>
+    <h3>Precio: @Model.Precio €</h3>
+</div>
+@section Scripts{
+        <script>
+       $(document).ready(function() {
+
+                var idZapato = @Model.IdProducto;
+
+                var request = "/Zapas/_ImagenZapatillas?idproducto=" + idZapato;
+
+                $("#CajaZapas").load(request);  
+        })
+  </script>
+  }
+<div id="CajaZapas">
+
+</div>
+
+

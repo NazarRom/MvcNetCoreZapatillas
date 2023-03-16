@@ -1,0 +1,8 @@
+﻿@model List<ImagenZapatilla>
+
+    <div>
+    @foreach(ImagenZapatilla imagen in Model)
+    {
+        <img src="@imagen.Imagen" style="width:100px" height="100px" />
+    }
+    </div>
